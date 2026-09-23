@@ -1,0 +1,60 @@
+\documentclass[11pt,a4paper]{article}
+
+\input{preamble.tex}
+
+\title{%
+  \AddToHook{shipout/background}{%
+  \ifnum\value{page}=1
+    \uitTitleLogo
+  \fi
+}
+  \Large
+  \textcolor{uitDarkBlue}{%
+    \textbf{Writing Scientific Reports in\\
+    Computer Science and Engineering}%
+  }
+  \\[0.3em]
+  \large
+  A Practical Guide and \LaTeX{} Template for Bachelor Students
+}
+
+\author{
+  Course: \emph{DTE-2602 Introduction to Machine Learning and Artifical Intelligence}\\
+  Instructor: \emph{Vegard Seines}
+}
+
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+  In this assignment Djikstras algorithm, a graph with a start and goal was given as well as a placeholder A* function. The objective was to implement the A* algorithm and compare the different solutions to a provided path finding problem. The A* algorithm was implementation was based on the provided Djikstra algorithm and tested with the provided program. The A* algorithm and Djikstra both found the same optimal path. Djikstra visited 196 nodes while A* only visited 163.
+\end{abstract}
+
+\newpage
+\tableofcontents
+\thispagestyle{fancy}
+\newpage
+
+% Its not always necessary to add a \newline after each section, 
+% but it is often done. It makes it easier to see where each new section starts.
+\input{sections/01_introduction}
+\newpage
+\input{sections/02_background}
+\newpage
+\input{sections/03_implementation}
+\newpage
+\input{sections/04_results}
+\newpage
+\input{sections/05_discussion}
+\newpage
+\input{sections/06_conclusion}
+\newpage
+
+\addcontentsline{toc}{section}{References}
+\bibliographystyle{ieeetr}
+\bibliography{references}
+
+\end{document}
